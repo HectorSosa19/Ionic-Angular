@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tabla</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Numero:</ion-label>
+        <ion-input [(ngModel)]="n1"></ion-input>
+      </ion-item>
+      <div style="padding:15px;">
+        <ion-button expand ="block" color="tertiary"(click)="generar()">Generar</ion-button>
+      </div>
+      <ion-item>
+        <ion-label>Resultado</ion-label>
+        {{resultado}}
+      </ion-item>
+    </ion-list>
+    <ion-item *ngFor = "let i of tabla">
+      <h4>{{i.numero}}</h4>
+    </ion-item>
+  </div>
+</ion-content>
